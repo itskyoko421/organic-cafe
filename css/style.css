@@ -1,0 +1,590 @@
+body{
+    background-color: #FFFAF4;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+a:hover{
+    opacity: 0.7;
+    
+}
+
+li{
+    list-style: none;
+}
+
+.wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#navi li img{
+    display: none;
+}
+
+
+
+
+/* 共通タイトル */
+.sec-title{
+    text-align: center;
+    font-family: serif;
+    color: #34823A;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.sec-title::before,
+.sec-title::after{
+    /* content: "";
+    width: 50px;
+    height: 2px;
+    background-color: #34823A;
+    position: absolute;
+    top: 50%;
+    left: -10px; */
+    content: "";
+    flex: 1;
+    border-bottom: 3px dotted #34823A;
+    margin: 0 50px;
+}
+
+
+
+/* ーーーーーmainvisualーーーーーーーーーーーーーーーーーーーーーー */
+.mainvisual{
+    height: 100vh;
+}
+
+.mainvisual .fade li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+.mainvisual li{
+    background-color: black;
+}
+
+
+/* 画像の切り替えアニメーション */
+.mainvisual .fade{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mainvisual .fade li{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fade 15s infinite;
+    position: absolute;
+    z-index: 0;
+}
+
+.mainvisual .fade li:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.mainvisual .fade li:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.mainvisual .fade li:nth-child(3) {
+    animation-delay: 10s;
+}
+
+
+@keyframes fade {
+    0% {
+    opacity: 0;
+    }
+
+    15% {
+    opacity: 1;
+    }
+
+    30% {
+    opacity: 1;
+    }
+
+    45% {
+    opacity: 0;
+    }
+
+    100% {
+    opacity: 0;
+    }
+}
+
+
+
+.mainvisual{
+    position: relative;
+}
+
+.mainvisual p{
+    color: white;
+    position: absolute;
+    top: 80%;
+    left: 38%;
+    /* transform: translateX(-50%); */
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    text-shadow: 1px 2px 3px #575757;
+}
+
+/* .mainvisual.organic img{
+    position: absolute;
+    top: 30px;
+    width: 200px;
+} */
+.mainvisual img.organic {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+}
+.mainvisual img.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+}
+
+
+
+/* ーーーーーヘッダーーーーーーーーーーーーーーーーーーーーーーー */
+.sticky-header{
+    width: 100%;
+    height: 80px;
+    background-color: #306733;
+    align-items: center;
+
+    position: fixed;
+    top: -80px; /* 初期は隠れてる */
+    left: 0;
+
+    z-index: 20;
+    transition: top 0.3s ease;
+}
+
+.sticky-header.show {
+    top: 0; /* 表示状態 */
+}
+
+.sticky-header .logo{
+    width: 8%;
+}
+
+.sticky-header .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-list{
+    display: flex;
+}
+
+.header-list li{
+    margin-left: 30px;
+}
+
+.header-list li a{
+    font-family: serif;
+    font-weight: bold;
+}
+
+
+
+
+
+/* ーーーーーABOUTーーーーーーーーーーーーーーーーーーーーーー */
+.about .wrapper{
+    display: flex;
+}
+
+.about .item{
+    width: 50%;
+    margin-right: 50px;
+    text-align: center;
+}
+
+.about .item p{
+    margin-bottom: 30px;
+    color: #280808;
+    text-align: left;
+}
+
+.about img{
+    width: 500px;
+}
+
+.about .btn{
+    text-align: center;
+    border: 1px solid #280808;
+    border-radius: 20px;
+}
+.about .item a{
+    color: #280808;
+    padding: 5px 15px;
+}
+
+
+/* ーーーーーMENUーーーーーーーーーーーーーーーーーーーーーー */
+.menu-category{
+    color: #280808;
+    font-size: 1.5rem;
+    font-family: serif;
+}
+
+.menu-item{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.menu-item img,
+.menu-item dl{
+    width: 50%;
+}
+
+.menu-item dl{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+.menu-item dt{
+    width: 70%;
+}
+.menu-item dd{
+    width: 30%;
+}
+.menu-item dt p{
+    font-size: 0.75rem;
+}
+
+/* ACCESS ////////////////////////////////// */
+.access .wrapper{
+    display: flex;
+}
+
+.access dl,
+.access .map{
+    width: 50%;
+}
+.access dl{
+    display: flex;
+    flex-wrap: wrap;
+    color: #280808;
+    font-size: 1.1rem;
+}
+.access dt{
+    width: 30%;
+    /* border: solid 1px black; */
+}
+.access dd{
+    width: 70%;
+}
+
+
+/* footer//////////////////////////////////// */
+footer{
+    height: 300px;
+    background-color: #306733;
+    align-items: center;
+    margin-top: 100px;
+}
+
+footer p{
+    background-color: #306733;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+footer .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-list{
+    display: flex;
+}
+footer .footer-list li,
+footer .sns-list li{
+    font-size: 1.25rem;
+    margin-left: 30px;
+}
+footer .footer-list li a{
+    font-family: serif;
+    font-weight: bold;
+}
+footer .sns-list{
+    display: flex;
+}
+
+footer .sns-list img{
+    width: 35px;
+    /* margin-left: 20px; */
+}
+
+footer .logo{
+    width: 30%;
+}
+
+
+
+
+
+
+@media (max-width :600px){
+    .sticky-header{
+        display: none;
+    }
+
+    main{
+        padding: 0 10px;
+    }
+
+/* ーーーーーハンバーガーメニューーーーーーーーーーーーーーーーーーーーーーー */
+
+.header-hbg{
+    margin-top: 30px;
+}
+
+#navi{
+    display: block;
+}
+
+.hamburger{
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    background-color: #306733;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    z-index: 100;
+    transition: 0.3s;
+}
+.hamburger:hover {
+    opacity: 0.7;
+}
+
+.hamburger span{
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: #e8e8e8;
+    position: absolute;
+    left: 25%;
+    transition: 0.3s;
+}
+.hamburger span:nth-child(1){
+    top: 30%;
+}
+.hamburger span:nth-child(2){
+    top: 50%;
+}
+.hamburger span:nth-child(3){
+    bottom: 30%;
+}
+
+.open .hamburger span:nth-child(1) {
+    top: 47%;
+    background: #fff;
+    transform: rotate(-45deg);
+}
+.open .hamburger span:nth-child(2),
+.open .hamburger span:nth-child(3) {
+    top: 47%;
+    bottom: auto; 
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+
+#navi {
+    width: 100%;
+    height: 100vh;
+    background-color: #306733;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 40;
+    text-align: center;
+    transition: all 0.6s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*
+ハンバーガーメニューがクリックされた際に、jQueryでheaderにopenクラスを追加して、
+メニューを表示させる。
+  */
+.open #navi {
+    opacity: 1;
+    visibility: visible;
+}
+
+.open #navi li{
+    font-size: 1.25rem;
+    margin-top: 20px;
+}
+.open #navi ul{
+    margin-top: 120px;
+}
+
+
+.open #navi li a{
+font-family: serif;
+font-weight: bold;
+}
+
+.open #navi li img{
+    display: block;
+    width: 30%;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+/* ーーーーーABOUTーーーーーーーーーーーーーーーーーーーーーー */
+    .about .wrapper{
+        flex-direction: column;
+    }
+
+    .about .item{
+        width: 100%;
+    }
+
+    .about img{
+        margin-top: 30px;
+    }
+
+
+
+/* ーーーーーMENUーーーーーーーーーーーーーーーーーーーーーー */
+
+.menu-item{
+    flex-direction: column;
+}
+
+.menu-item img,
+.menu-item dl{
+    width: 100%;
+}
+
+.menu-item img{
+    margin-bottom: 20px;
+}
+
+.menu-item dl{
+    margin-left: 0px;
+}
+.menu-item dt{
+    width: 85%;
+    margin-bottom: 15px;
+}
+.menu-item dd{
+    width: 15%;
+    margin-bottom: 15px;
+}
+
+
+/* ーーーーーACCESSーーーーーーーーーーーーーーーーーーーーーー */
+.access .wrapper{
+    flex-direction: column;
+}
+
+.access dl,
+.access .map{
+    width: 100%;
+}
+
+.access dt{
+    margin-bottom: 15px;
+}
+.access dd{
+    margin-bottom: 15px;
+} 
+
+
+
+
+/* ーーーーーfooterーーーーーーーーーーーーーーーーーーーーーー */
+/* footer{
+    height: 300px;
+    background-color: #34823A;
+    align-items: center;
+    margin-top: 100px;
+}
+
+footer p{
+    background-color: #34823A;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+} */
+
+footer .wrapper{
+    flex-direction: column;
+    /* justify-content: space-between;
+    align-items: center; */
+}
+
+footer .footer-list{
+    flex-direction: column;
+}
+footer .footer-list li,
+footer .sns-list li{
+    margin-left: 0px;
+    text-align: center;
+}
+footer .sns-list li{
+    margin: 20px 10px;
+}
+
+footer .sns-list img{
+    width: 25px; 
+}
+
+footer .logo{
+    width: 100px;
+    height: 100px;
+}
+
+
+}
+
+
+
+
+
