@@ -1,8 +1,5 @@
 body{
     background-color: #FFFAF4;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
 }
 
 img{
@@ -224,10 +221,17 @@ li{
 }
 
 .about .item{
-    width: 50%;
+/*     width: 50%; */
     margin-right: 50px;
     text-align: center;
 }
+
+.about .item,
+.about img{
+    width: 50%;
+}
+
+
 
 .about .item p{
     margin-bottom: 30px;
@@ -235,9 +239,9 @@ li{
     text-align: left;
 }
 
-.about img{
+/* .about img{
     width: 500px;
-}
+} */
 
 .about .btn{
     text-align: center;
