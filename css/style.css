@@ -538,6 +538,8 @@ font-weight: bold;
 }
 .access .map iframe {
     width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
 }
     
 .access dt{
